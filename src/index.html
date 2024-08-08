@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <div class="content">
+    <div class="content" id="content">
         <div class="header mb-3">
             <h1 class="bookify text-center">Bookify</h1>
         </div>
-        <div class="form-container">
+        <div class="form-container" id="form-container">
             <div class="form-group input-group">
                 <label for="username-bookify" class="username-label">Username:</label>
                 <input type="text" id="username-bookify" class="form-control">
@@ -22,15 +22,19 @@
                 <input type="password" id="password-bookify" class="form-control">
             </div>
             <div class="forgot-password">
-                <a href="#">Forgot password?</a>
+                <a href="#" onclick="showForgotPassword()">Forgot password?</a>
+            </div>
+            <div class="new-account">
+                <a href="#">Don't have an account?</a>
             </div>
         </div>
-        <div class="footer">
+        <div class="footer" id="footer">
             <button type="button" class="btn-primary" onclick="handleLogin()">Login</button>
             <button type="button" class="btn-github" onclick="loginWithGitHub()">Login with GitHub</button>
         </div>
         <span id="authentication-error"></span>
         <span id="success-message" class="message"></span> <!-- Başarı mesajı için span -->
+        <span id="message" class="message"></span>
     </div>
     <script src="js/auth/login.js"></script>
 </body>
