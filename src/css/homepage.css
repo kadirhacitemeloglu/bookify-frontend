@@ -1,0 +1,227 @@
+/* Genel ayarlar */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: radial-gradient(circle, #ff5f5f, #7ba4fe);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.2); /* Şeffaf arka plan */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Üstte kalması için */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo:hover {
+    opacity: 0.8;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff4757;
+}
+
+/* Hero bölümü */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid black;
+}
+
+.primary:hover {
+    background-color: #e84118;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.secondary:hover {
+    background-color: white;
+    color: #0072ff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Animasyon */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobil uyumluluk */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    border-radius: 10px; /* Köşeleri yuvarlama */
+    border : none !important;
+    box-shadow: none !important;
+  }
+  
+  .logo img {
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%; /* Logoyu daire içine almak */
+  }
+
+  
+  .navbar {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Navbar'a hafif bir gölge ekler */
+  }
+  
+  .logo {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Logo etrafında gölge */
+    border-radius: 10px; /* Köşeleri yumuşat */
+  }
+
+  body {
+    background: linear-gradient(135deg, rgba(255, 0, 150, 0.8), rgba(0, 204, 255, 0.8));
+  }
+  
+  .navbar {
+    padding: 15px 30px; /* Daha fazla iç boşluk */
+  }
+  
+  .logo {
+    padding: 10px 20px; /* Logo çevresine ekstra boşluk */
+    border-radius: 12px; /* Daha fazla yuvarlaklık */
+  }
+    
+  .logo:hover {
+    background-color: transparent !important;
+    transition: background-color 0.3s ease-in-out; /* Yumuşak geçiş efekti */
+    border: none;
+    box-shadow: none; 
+  }
+  
+  .nav-links a:hover {
+    color: #ff6347;
+    border-bottom: 2px solid #ff6347;
+    transition: all 0.3s ease-in-out;
+  }
+  

@@ -4,22 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/homepage.css">
 </head>
-<header>
-    <h1 class="homepageHeader">Bookify</h1>
-    <nav>
-        <ul>
-            <li><a href="#" onclick="showSection('home')">Home</a></li>
-            <li><a href="#" onclick="showSection('about')">About Bookify</a></li>
-            <li><a href="#" onclick="showSection('faq')">FAQ</a></li>
-            <li><a href="#" onclick="showSection('login')">Login</a></li>
-            <li><a href="#" onclick="showSection('membership')">Membership</li>
-        </ul>
-    </nav>
-    <main>
-        <p>This is the main content of the homepage.</p>
-    </main>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="#" class="logo">
+              <img src="images/bookify.png" alt="Bookify Logo" />
+              <span>Bookify</span>
+            </a>
+            <ul class="nav-links">
+              <li><a href="#">Home</a></li>
+              <li><a href="#" onclick="showSection('membership')">Membership</a></li>
+              <li><a href="#" onclick ="navigateLogin()">Login</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+    </header>
+    <div class="hero">
+        <div class="hero-content">
+          <h1>Keşfedilmeyi Bekleyen Binlerce Kitap!</h1>
+          <p>Kitap koleksiyonunuzu genişletmek için hemen Bookify’a katılın.</p>
+          <div class="cta-buttons">
+            <a href="#" class="btn primary">Üye Ol</a>
+            <a href="#" class="btn secondary">Kitapları Keşfet</a>
+          </div>
+        </div>
+      </div>      
+      <footer>
+        <p>© 2024 Bookify. All rights reserved.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </footer>
+      
+    <script src="js/main.js"></script>
 </body>
+
 </html>
