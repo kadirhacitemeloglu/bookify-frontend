@@ -1,3 +1,4 @@
+/* Arka Plan */
 body {
     background: radial-gradient(circle, #ff5f5f, #7ba4fe);
     display: flex;
@@ -9,373 +10,151 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+/* İçerik Kutusu */
 .content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: auto;
     width: 90%;
     max-width: 400px;
-    padding: 20px;
-    border-radius: 4px;
-    background: radial-gradient(circle, #dcdfe4, #eceae9);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border: 2px solid;
-    border-image-slice: 1;
-    border-width: 2px;
-   
-    border-radius: 10px;
+    padding: 30px;
+    background: #f9f9f9;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    transition: transform 0.3s ease;
+    text-align: center; /* Tüm içerikleri ortala */
 }
 
-
-
-.header {
-    text-align: center;
-    color: #2713d66e;
-    margin-bottom: 20px;
+.content:hover {
+    transform: translateY(-5px);
 }
 
-.bookify {
-    font-size: 2em; /* Başlık boyutunu biraz küçülttük */
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-}
-
-.form-container {
-    width: 100%;
-    margin-bottom: 20px;
-    border-radius: 10px;
-}
-
-.input-group {
+/* Logo */
+.logo {
+    position: relative;
+    top: -60px;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
+    justify-content: center;
 }
 
-.username-label,
-.password-label {
-    
-    font-size: 0.9em; /* Font boyutunu küçülttük */
-    color: black;
-    width: 80px; /* Genişliği biraz daralttık */
-    text-align: right;
-    font-family: 'Roboto', sans-serif;
+.logo img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
-#username-bookify,
-#password-bookify {
-    padding: 9px;
-    font-size: 0.9em; /* Font boyutunu küçülttük */
-    flex-grow: 1;
-    border: 1px solid #ccc;
+/* Header - Başlık */
+.bookify {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #4a90e2;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-#username-label{
-    text-align: left;
-
-}
-
-.forgot-password {
-    text-align: right;
-    margin-top: -5px;
-    margin-left: -10px; /* Forgot password bağlantısını yukarı kaydırmak için negatif margin kullandık */
-    margin-bottom: 10px; /* Alttaki label ile arasındaki boşluğu korur */
-    transition: color 0.2s ease-in-out;
+/* Input Alanları */
+.input-group input {
     width: 100%;
-    margin-top: 30px;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
 }
 
-.forgot-password a {
-    
-    padding: 30px px;
-    font-size: 0.8em; /* Font boyutunu küçülttük */
-    color: #0f4788;
-    text-decoration: underline;
-    cursor: pointer;
-    
+.input-group input:focus {
+    border-color: #4a90e2;
+    outline: none;
 }
 
-.forgot-password a:hover{
-    color: red;
-}
-
-.new-account a:hover{
-    color:green;
-}
-
-.new-account {
-    text-align: left;
-    margin-left:90px;
-    margin-top: -27px; /* Forgot password bağlantısını yukarı kaydırmak için negatif margin kullandık */
-    margin-bottom: 10px; /* Alttaki label ile arasındaki boşluğu korur */
-    transition: color 0.2s ease-in-out;
+/* Linkler (Forgot Password, New Account) */
+.forgot-password, .new-account {
     width: 100%;
+    font-size: 0.9em;
+    display: flex;
+    justify-content: space-between; /* Linkleri yatayda dağıt */
+    margin-top: 10px;
 }
 
-.new-account a {
-    padding: 10px 0px;
-    font-size: 0.8em; /* Font boyutunu küçülttük */
-    color: #0f4788;
+.forgot-password a, .new-account a {
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+.forgot-password a:hover, .new-account a:hover {
     text-decoration: underline;
-    cursor: pointer;
+    color: #0033cc;
 }
 
+/* Footer - Butonlar */
 .footer {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 10px;
     width: 100%;
     margin-top: 20px;
 }
 
 .footer button {
-    padding: 5px 10px;
-    font-size: 0.9em; /* Font boyutunu küçülttük */
-    cursor: pointer;
-    text-align: center;
+    width: 48%; /* Butonları eşit genişlikte yap */
+    padding: 12px;
+    border-radius: 8px;
     border: none;
-    width: auto;
-    flex: 1; /* Butonları eşit genişlikte yapar */
-}
-
-.btn-login{
-    background-color: #0f4788;
-    color: white;
-}
-
-.btn-login:hover {
-    background-color: #17e054;
-    color: white;
-}
-
-.btn-github:hover {
-    background-color: #ff6347;
-    color: white;
-}
-
-.btn-primary {
-    background-color: #0f4788;
-    color: white;
-}
-
-.btn-github {
-    background-color: #0f4788;
-    color: white;
-}
-
-.alert-message {
-    text-align: center;
-    margin-left: 100px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    color: #f13211;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1.2em;
-    border-radius: 5px;
-}
-
-.success-login {
-    color: green !important;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1.2em;
-    margin-left: 100px;
-    margin-top: 20px;
-    text-shadow: 2px 2px 4px #7bc3fe; /* Text shadow için doğru syntax */
-    display: block;
-}
-
-
-
-#resetLink{
-    width: 30px; /* Butonun genişliği içeriğe göre otomatik ayarlanır */
-    margin-right: 0px;
-    margin-top: 5px;
+    font-size: 1em;
     cursor: pointer;
-    text-decoration: underline;
-    font-size: 0.9em; /* Font boyutunu küçülttük */
-    background-color :white;
-    border:black solid;
-    padding: 30;
-    text-align: center;
-    line-height: 1;
-    border-radius:0;    
+    transition: background-color 0.3s ease;
 }
 
-#back-homepage{
-    width: 20px; /* Butonun genişliği içeriğe göre otomatik ayarlanır */
-    margin-left: 70px;
-    margin-top: 5px;
-    cursor: pointer;
-    text-decoration: underline;
-    font-size: 0.9em; /* Font boyutunu küçülttük */
-    background-color :white;
-    border:black solid;
-    padding: 30;
-    text-align: center;
-    line-height: 1;
-    border-radius:0;    
-}
-
-#back-homepage:hover{
-    color:black;
-    background-color: orange;
-}
-
-#resetLink:hover{
-    color: black;
-    background-color: orange;
-}
-
-#email{
-    margin-left:10px;
-    width: 120%;
-}
-
-
-.username-label-mail {
-    font-size: 0.9em; /* Font boyutunu küçülttük */
-    color: black;
-    width: 100px; /* Genişliği biraz daralttık */
-    text-align: right;
-    font-family: 'Roboto', sans-serif;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    margin-left: -20px;
-}
-
-#bookifytext{
-    color: #2713d66e;
-    font-size: 2em; /* Başlık boyutunu biraz küçülttük */
-    text-align: center;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    margin-bottom: 20px;
-    margin-top: 20px;
-    font-family: 'Roboto', sans-serif;
-    margin-left: 50px;
-}
-
-.login-box {
-    background-color: white; /* Arka plan rengini beyaz yap */
-    padding: 20px; /* Form içindeki alanlara boşluk ekle */
-    border-radius: 15px; /* Kenarları yumuşat */
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Gölgelendirme ekle */
-    max-width: 400px; /* Formun genişliğini sabitle */
-    margin: 0 auto; /* Ortalamak için */
-    text-align: center; /* İçeriği ortala */
-  }
-  
-  .login-box h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  .login-box input {
-    width: 100%; /* Input alanları genişliği ayarla */
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc; /* Input etrafına ince bir çerçeve ekle */
-    border-radius: 8px; /* Input alanlarının köşelerini yuvarla */
-  }
-  
-  .login-box button {
-    width: 48%; /* Buton genişliği */
-    padding: 10px;
-    border: none;
-    border-radius: 8px; /* Butonları da yuvarla */
-    background-color: #007bff;
+.footer .btn-login {
+    background-color: #4a90e2;
     color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .login-box button:hover {
-    background-color: #0056b3; /* Hover efekti */
-  }
-  
-  .login-box a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .login-box a:hover {
-    text-decoration: underline;
-  }
+}
 
-  
-  /* Login formu için stil */
-.login-box {
-    background-color: white; /* Arka plan rengini beyaz yap */
-    padding: 20px;
-    border-radius: 15px; /* Köşeleri yumuşat */
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Hafif gölge ekle */
-    max-width: 400px; /* Formun genişliği */
-    margin: 50px auto; /* Üstten biraz boşluk bırak ve ortala */
-    text-align: center; /* İçeriği ortala */
-    position: relative; /* Logoyu formun üzerine yerleştirmek için */
-  }
-  
-  /* Logonun stilini ayarlayalım */
-  .logo {
-    position: absolute;
-    top: -50px; /* Formun üzerinde yer alacak şekilde konumlandır */
-    left: 50%;
-    transform: translateX(-50%); /* Logoyu tam ortala */
-    width: 80px; /* Logonun boyutunu ayarla */
-    height: 80px;
-    background-color: #fff; /* Beyaz arka plan */
-    border-radius: 50%; /* Yuvarlak yap */
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Hafif bir gölge ekle */
-  }
-  
-  /* Logo içinde kullanılan görüntünün ayarlanması */
-  .logo img {
+.footer .btn-login:hover {
+    background-color: #357ab7;
+}
+
+.footer .btn-github {
+    background-color: #333;
+    color: white;
+}
+
+.footer .btn-github:hover {
+    background-color: #555;
+}
+
+/* Input Alanları - Yan Yana */
+.input-group {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    margin-top: 50px; /* Logoyu düzgün bir şekilde sığdır */
-    display: flex; /* Log
+    margin-bottom: 15px;
 }
-  
-  /* Diğer login form elemanları */
-  .login-box h1 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-  }
-  
-  .login-box input {
-    width: 100%;
+
+.input-group label {
+    width: 30%; /* Label genişliği */
+    text-align: right; /* Sağda hizala */
+    padding-right: 10px;
+}
+
+.input-group input {
+    width: 65%; /* Input genişliği */
     padding: 10px;
-    margin-bottom: 20px;
+    border-radius: 8px;
     border: 1px solid #ccc;
-    border-radius: 8px;
-  }
-  
-  .login-box button {
-    width: 48%;
-    padding: 10px;
-    border: none;
-    border-radius: 8px;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .login-box button:hover {
-    background-color: #0056b3;
-  }
-  
-  .login-box a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .login-box a:hover {
-    text-decoration: underline;
-  }
-  
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #4a90e2;
+    outline: none;
+}
