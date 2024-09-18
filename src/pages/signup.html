@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Sign Up</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
     <header role="banner" class="mh-header-hover">
         <div class="navbar">
             <a href="#" onclick="navigateHomepage()" class="logo">
-              <img src="images/bookify.png" alt="Bookify Logo" />
+              <img src="../images/bookify.png" alt="Bookify Logo" />
             </a>
         </div>
     </header>
@@ -27,21 +27,25 @@
                 <input type="text" id="username-bookify" class="form-control" placeholder="Enter username">
             </div>
             <div class="form-group input-group">
+                <label for="email-bookify" class="email-label">Email:</label>
+                <input type="email" id="email-bookify" class="form-control" placeholder="Enter email">
+            </div>
+            <div class="form-group input-group">
                 <label for="password-bookify" class="password-label">Password:</label>
                 <input type="password" id="password-bookify" class="form-control" placeholder="Enter password">
             </div>
-
-            <div class="forgot-password">
-                <a href="#" onclick="showForgotPassword()">Forgot password?</a>
+            <div class="form-group input-group">
+                <label for="confirm-password-bookify" class="password-label">Confirm Password:</label>
+                <input type="password" id="confirm-password-bookify" class="form-control" placeholder="Confirm password">
             </div>
+
             <div class="new-account">
-                <a href="#">Don't have an account?</a>
+                <a href="#" onclick="navigateLogin()">Already have an account?</a>
             </div>
         </div>
 
         <div class="footer" id="footer">
-            <button type="button" class="btn-primary" onclick="handleLogin()">Login</button>
-            <button type="button" class="btn-github" onclick="loginWithGitHub()">Login with GitHub</button>
+            <button type="button" class="btn-primary" onclick="handleSignup()">Sign Up</button>
         </div>
 
         <span id="authentication-error" class="error-message"></span>
@@ -49,7 +53,7 @@
         <span id="message" class="message"></span>
     </div>
 
-    <script src="js/auth/login.js"></script>
-    <script src="js/main.js"></script>
+    <script src="../js/auth/signup.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>

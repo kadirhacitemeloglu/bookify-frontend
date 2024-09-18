@@ -122,5 +122,11 @@ function navigateLogin(){
    }, 2000);
 }
 
+function navigateSignUp(){
+  // Navigate to signup page
+  setTimeout(function(){
+    window.location.href = "signup.html";
+  }, 2000);
+}
 
 

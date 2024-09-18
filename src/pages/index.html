@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <header role="banner" class="mh-header-hover">
+        <div class="navbar">
+            <a href="#" onclick="navigateHomepage()" class="logo">
+              <img src="../images/bookify.png" alt="Bookify Logo" />
+            </a>
+        </div>
+    </header>
+    
+    <div class="content" id="content">
+        <div class="header mb-3">
+            <h1 class="bookify text-center">Bookify</h1>
+        </div>
+        
+        <div class="form-container" id="form-container">
+            <div class="form-group input-group">
+                <label for="username-bookify" class="username-label">Username:</label>
+                <input type="text" id="username-bookify" class="form-control" placeholder="Enter username">
+            </div>
+            <div class="form-group input-group">
+                <label for="password-bookify" class="password-label">Password:</label>
+                <input type="password" id="password-bookify" class="form-control" placeholder="Enter password">
+            </div>
+
+            <!-- Forgot Password ve New Account linklerini yan yana yerleştiriyoruz -->
+            <div class="links-container">
+                <a href="#" class="forgot-password" onclick="showForgotPassword()">Forgot password?</a>
+                <a href="#" class="new-account" onclick="navigateSignUp()">Don't have an account?</a>
+            </div>
+        </div>
+
+        <div class="footer" id="footer">
+            <button type="button" class="btn-primary" onclick="handleLogin()">Login</button>
+            <button type="button" class="btn-github" onclick="loginWithGitHub()">Login with GitHub</button>
+        </div>
+
+        <span id="authentication-error" class="error-message"></span>
+        <span id="success-message" class="success-message"></span>
+        <span id="message" class="message"></span>
+    </div>
+
+    <script src="../js/auth/login.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

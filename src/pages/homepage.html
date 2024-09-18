@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
-    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="../css/homepage.css">
+
 </head>
 <body>
     <header>
         <div class="navbar">
             <a href="#" class="logo">
-              <img src="images/bookify.png" alt="Bookify Logo" />
+              <img src="../images/bookify.png" alt="Bookify Logo" />
               <span>Bookify</span>
             </a>
             <ul class="nav-links">
               <li><a href="#">Home</a></li>
-              <li><a href="#" onclick="showSection('membership')">Membership</a></li>
+              <li><a href="#" onclick="getMemberShip()">Membership</a></li>
               <li><a href="#" onclick ="navigateLogin()">Login</a></li>
               <li><a href="#">FAQ</a></li>
             </ul>
@@ -40,7 +41,8 @@
         </div>
       </footer>
       
-    <script src="js/auth/login.js"></script>
+    <script src="../js/auth/login.js"></script>
+    <script src="../js/auth/membership.js"></script>
 </body>
 
 </html>
