@@ -5,14 +5,13 @@
     display: flex;
     justify-content: space-between; /* Logo ve linkleri iki yana yerleştirir */
     align-items: center; /* Logo ve linkleri dikey olarak ortalar */
-    padding: 10px 20px;
+    padding: 10px 40px;
     width: 100%; /* Navbar tam genişlikte olsun */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
     position: fixed; /* Sayfa kaydırıldığında sabit kalmasını sağlar */
     top: 0; /* Ekranın en üstüne sabitle */
     left: 0;
-/* Diğer elementlerin üstünde kalmasını sağlar */
-    height: 60px; /* Sabit bir yükseklik */
+/* Diğer elementlerin üstünde kalmasını sağlar */   
 }
 
 .logo img {
@@ -26,7 +25,7 @@
     display: flex;
     list-style: none;
     gap: 10px; /* Menü öğeleri arasına boşluk ekler */
-    margin-right:40px; /* Linkleri sağ tarafa hizalar */
+    margin-right:60px; /* Linkleri sağ tarafa hizalar */
 }
 
 .nav-links li a {
@@ -68,19 +67,26 @@ main {
 
 .plans-container {
     display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    flex-wrap: wrap; /* Ekran daraldıkça alt alta sıralar */
+    justify-content: center; /* Kartları ortala */
+    gap: 10px; /* Kartlar arasındaki boşluğu daha da daralt */
+    flex-wrap: wrap;
 }
 
 .plan {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
     width: 250px;
-    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px; /* Kartlar arasında daha fazla boşluk bırakmak için */
 }
+
+.plan:hover {
+    transform: scale(1.05); /* Hafifçe büyüt */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Daha güçlü bir gölge efekti */
+}
+
 
 .plan h2 {
     font-size: 1.5rem;
@@ -95,10 +101,10 @@ main {
 }
 
 .plan .price {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
+    color: #007bff;
+    margin-bottom: 15px;
 }
 
 .plan button {
@@ -114,17 +120,13 @@ main {
 
 .plan button:hover {
     background-color: #0056b3;
+    transform: scale(1.05); /* Butonlar da hafifçe büyüsün */
 }
 
 /* Mobil uyumluluk */
 @media (max-width: 768px) {
-    .plans-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .plan {
-        width: 80%;
+        width: 90%; /* Kartlar mobilde geniş alan kaplasın */
         margin-bottom: 20px;
     }
 }

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="navbar">
+            <button id="menu-toggle" class="menu-btn">&#9776;</button> <!-- Menü butonu -->
+            <a href="homepage.html" class="logo">
+                <img src="../images/bookify.png" alt="Bookify Logo">
+                <span></span>
+            </a>
+
+            <div class="profile-info">
+                <img src="../images/user.png" alt="Profile Image" class="profile-img">
+                <span class="username">John Doe</span>
+            
+                <!-- Dropdown Menüsü -->
+                <div class="dropdown-content">
+                    <a href="#">Settings</a>
+                    <a href="homepage.html">Log Out</a>
+                </div>
+            </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="#">Kitaplarım</a></li>
+            <li><a href="#">Favorilerim</a></li>
+            <li><a href="#">Yeni Kitap Ekle</a></li>
+            <li><a href="#">Üyelik Planı</a></li>
+        </ul>
+    </aside>
+
+    <!-- Dashboard İçeriği -->
+    <main>
+        <section class="dashboard-section">
+            <h1>Welcome, John Doe!</h1>
+            <p>Here is your personalized dashboard, where you can manage your account, see your book collection, and more.</p>
+
+            <div class="dashboard-container">
+                <div class="dashboard-item">
+                    <h2>Your Membership</h2>
+                    <p>Current Plan: Premium</p>
+                    <button onclick="upgradePlan()">Upgrade Plan</button>
+                </div>
+
+                <div class="dashboard-item">
+                    <h2>Your Book Collection</h2>
+                    <p>Manage your book collection efficiently.</p>
+                    <button onclick="manageBooks()">Manage Books</button>
+                </div>
+
+                <div class="dashboard-item">
+                    <h2>Favorite Books</h2>
+                    <p>Check out your favorite books.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Bookify. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/profile.js"></script>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const sidebar = document.getElementById('sidebar');
+
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

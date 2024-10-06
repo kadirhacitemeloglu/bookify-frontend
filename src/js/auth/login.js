@@ -2,7 +2,7 @@ var username = "khacitemeloglu";
 var password = "123";
 
 function redirectToLogin() {
-  window.location.href = "https://login.microsoft.com";
+  window.location.href = "dashboard.html";
 }
 
 function handleLogin() {
