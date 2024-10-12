@@ -1,0 +1,111 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: radial-gradient(circle, #7ba4fe, #ff5f5f);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.menu-btn {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+}
+
+.logo img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+}
+
+.profile-img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.dropdown-content {
+    display: none;
+}
+
+.username {
+    color: white;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Main Content */
+.settings-section {
+    margin-left: 250px;
+    padding: 80px 20px;
+}
+
+.settings-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+    color: white;
+    padding: 10px 0;
+}

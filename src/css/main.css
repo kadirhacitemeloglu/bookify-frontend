@@ -45,6 +45,11 @@ body {
     justify-content: center;
 }
 
+#header-bookify{
+    text-align: center;
+    margin-top : -5px
+}
+
 .logo img {
     width: 80%;
     height: 80%;
@@ -73,10 +78,11 @@ body {
     width: 30%;
     text-align: right;
     padding-right: 10px;
+    height: 3.5vh;
 }
 
 .input-group input {
-    width: 65%;
+    width: 100%;
     padding: 12px;
     border-radius: 8px;
     border: 1px solid #ccc;
@@ -113,14 +119,16 @@ body {
 
 /* Footer - Butonlar */
 .footer {
-    display: flex;
+
     justify-content: space-between;
     gap: 10px;
     width: 100%;
     margin-top: 20px;
 }
 
-.footer button {
+.footer .btn-signup{
+    text-align: center;
+
     width: 48%;
     padding: 12px;
     border-radius: 8px;
@@ -184,6 +192,12 @@ button {
     cursor: pointer;
     font-size: 1rem;
     transition: background-color 0.3s ease;
+    margin-top : 10px;
+}
+
+.btn-primary{
+    margin-bottom: 20px;
+    
 }
 
 button:hover {
@@ -229,7 +243,7 @@ form {
 
 .input-group label {
     width: 30%; /* Label genişliği */
-    text-align: right; /* Sağda hizala */
+    text-align: left; /* Sağda hizala */
     padding-right: 10px;
     font-size: 1rem; /* Label boyutunu tutarlı yap */
     color: #333; /* Label metin rengini düzelt */
@@ -264,5 +278,11 @@ form {
 .links-container a:hover {
     text-decoration: underline;
     color: #0033cc;
+}
+
+.new-account{
+    text-align: center;
+    margin-bottom : 10px;
+    justify-content: center;
 }
 

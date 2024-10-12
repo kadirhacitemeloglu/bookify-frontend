@@ -1,0 +1,95 @@
+/* FAQ Page Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f05f57, #360940);
+    color: #fff;
+    height: 100vh;
+}
+
+header {
+    background-color: transparent;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+/* Logo için radius ekleyelim */
+.logo {
+    width: 100px; /* Logonun genişliği */
+    margin-bottom: 10px;
+    border-radius: 50%; /* Yuvarlak yapmak için %100 kullanıyoruz */
+    border: 2px solid white; /* Kenarlık ekliyoruz */
+    display: block; /* Görüntüleme düzenini block olarak ayarladık */
+    cursor: pointer;
+}
+
+h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.faq {
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    margin-top: 0;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+}
+
+.faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 10px;
+    font-size: 24px;
+    transition: transform 0.3s;
+}
+
+.faq-question.active::after {
+    content: '-';
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    margin: 10px 0 0;
+    color: #ddd;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+footer {
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

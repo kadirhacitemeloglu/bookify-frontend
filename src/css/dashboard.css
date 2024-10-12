@@ -1,12 +1,9 @@
 /* Genel Ayarlar */
 body {
-    background: radial-gradient(circle, #7ba4fe, #ff5f5f);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
+    padding: 0;
     font-family: 'Roboto', sans-serif;
+    background: radial-gradient(circle, #7ba4fe, #ff5f5f);
 }
 
 /* Navbar */
@@ -15,14 +12,13 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 40px;
-    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
     position: fixed;
+    width: 100%;
     top: 0;
-    left: 0;
-    z-index: 10;
-    background: none;
-    box-shadow: none;
+    z-index: 1000;
     color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .menu-btn {
@@ -31,70 +27,82 @@ body {
     border: none;
     color: white;
     cursor: pointer;
-    margin-right: 10px;
 }
 
-/* Profil Dropdown */
-.navbar .profile-info {
-    display: flex;
+.logo img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Profil Bölümü */
+.profile-info {
+    display:block;
+    margin-right: 80px;
     align-items: center;
     cursor: pointer;
-    position:relative;
-    margin-right: 70px;
+    margin-bottom: ;
+  
 }
 
-.navbar .profile-info .profile-img {
-    height: 40px;
-    width: 40px;
+.profile-img {
+    height:35px;
+    width: 35px;
     border-radius: 50%;
-    margin-right: 10px;
+    align-items: center;
+    
 }
 
-.navbar .profile-info .dropdown-content {
+.username {
+    color: white;
+    margin-left: 10px;
+}
+
+/* Dropdown Menüsü */
+.dropdown-content {
     display: none;
     position: absolute;
-    right: 0;
     top: 50px;
+    right: 0;
     background-color: white;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1;
-    width: 150px;
 }
 
-.navbar .profile-info .dropdown-content a {
+.dropdown-content a {
     color: #333;
     padding: 10px 15px;
     text-decoration: none;
     display: block;
-    transition: background-color 0.3s ease;
 }
 
-.navbar .profile-info .dropdown-content a:hover {
+.dropdown-content a:hover {
     background-color: #f1f1f1;
 }
 
-.navbar .profile-info.active .dropdown-content {
+.profile-info.active .dropdown-content {
     display: block;
 }
 
 /* Sidebar */
 .sidebar {
     position: fixed;
-    top: 60px;
-    left: -250px;
-    width: 250px;
+    top: 84px;
+    left: 0;
+    width: 210px;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-    padding-top: 20px;
-    transition: all 0.4s ease;
-    z-index: 9;
-    backdrop-filter: blur(10px);
+
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-250px); /* Başlangıçta gizli */
+    z-index: 100; /* İçeriğin üzerine gelmesi için */
+    overflow: hidden; /* Sidebar'ın taşmasını önler */
 }
 
 .sidebar.active {
-    left: 0;
+    transform: translateX(0); /* Açıldığında görünür */
 }
 
 .sidebar ul {
@@ -103,30 +111,33 @@ body {
 }
 
 .sidebar ul li {
-    padding: 15px 20px;
+    margin: 15px 0;
 }
 
 .sidebar ul li a {
     text-decoration: none;
-    color: #333;
-    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.699);
+    font-size: 1.2rem;
     display: block;
-    transition: background-color 0.3s ease;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .sidebar ul li a:hover {
     background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
 }
 
-/* Dashboard */
+/* Dashboard İçeriği */
 .dashboard-section {
-    padding-top: 120px; /* Navbar'a alan bırakmak için */
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    padding: 80px 20px;
+    margin-left: 0; /* Başlangıçta tam ekran */
+    transition: margin-left 0.3s ease;
+    text-align: center;
+    color: white;
+}
+
+.sidebar.active + .dashboard-section {
+    margin-left: 250px; /* Sidebar açıldığında içerik sağa kayar */
 }
 
 .dashboard-container {
@@ -134,34 +145,33 @@ body {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-    margin-top: 30px; /* Başlıkla araya boşluk ekle */
 }
 
-/* Dashboard Item Kutuları */
 .dashboard-item {
     background-color: white;
     padding: 20px;
-    border-radius: 15px;
+    border-radius: 12px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-    width: 300px;
+    width: 280px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s, box-shadow 0.3s;
+    align-items: center;
+    margin-top: 200px;
 }
 
 .dashboard-item:hover {
     transform: scale(1.05);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .dashboard-item h2 {
     font-size: 1.5rem;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     color: #4a90e2;
 }
 
 .dashboard-item p {
     font-size: 1rem;
-    margin-bottom: 20px;
     color: #666;
 }
 
@@ -183,22 +193,14 @@ button:hover {
 
 /* Footer */
 footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     text-align: center;
-    padding: 20px 0;
     background-color: transparent;
     color: white;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-/* Logo Düzenlemesi */
-.navbar .logo img {
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid white;
+    padding: 10px 0;
+    z-index: 10;
 }
 
 /* Responsive Düzenleme */
@@ -224,4 +226,16 @@ footer {
     .sidebar.active {
         left: 0;
     }
+}
+
+#book-title {
+    display: inline;
+    margin-left: 22px;
+} 
+
+
+#dashboard-content{
+    margin-top: 30vh;
+    align-items: left;
+
 }
