@@ -1,288 +1,84 @@
-/* Genel Ayarlar */
-body {
-    background: radial-gradient(circle, #ff5f5f, #7ba4fe);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+/* Base styles */
+* {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* İçerik Kutusu */
-.content {
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* Navbar styles */
+.navbar {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    width: 90%;
-    max-width: 400px;
-    padding: 30px;
-    background: #f9f9f9;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    border-radius: 15px;
-    border: 1px solid #ccc;
-    transition: transform 0.3s ease;
-    text-align: center;
+    padding: 10px 30px;
 }
 
-.content:hover {
-    transform: translateY(-5px);
-}
-
-/* Logo */
+/* Logo styles */
 .logo {
-    position: relative;
-    top: -60px;
-    width: 100px;
-    height: 100px;
-    background-color: white;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-circle {
+    width: 35px;
+    height: 35px;
+    background: #4CAF50;
     border-radius: 50%;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
-#header-bookify{
-    text-align: center;
-    margin-top : -5px
-}
-
-.logo img {
-    width: 80%;
-    height: 80%;
-    object-fit: cover;
+.logo-circle::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 5px,
+        rgba(0, 0, 0, 0.1) 5px,
+        rgba(0, 0, 0, 0.1) 10px
+    );
     border-radius: 50%;
 }
 
-/* Header - Başlık */
-.bookify {
-    font-size: 2.5em;
+.logo-circle span {
+    font-size: 20px;
     font-weight: bold;
-    color: #4a90e2;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    color: #333;
+    z-index: 1;
 }
 
-/* Input Alanları */
-.input-group {
+/* Navigation links */
+.nav-links {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 15px;
+    gap: 20px;
 }
 
-.input-group label {
-    width: 30%;
-    text-align: right;
-    padding-right: 10px;
-    height: 3.5vh;
-}
-
-.input-group input {
-    width: 100%;
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    transition: border-color 0.3s ease;
-}
-
-.input-group input:focus {
-    border-color: #4a90e2;
-    outline: none;
-}
-
-/* Forgot password ve New account linklerini yan yana hizala */
-.forgot-password, .new-account {
-    display: flex;
-    justify-content: space-between; /* Linkleri yatayda dağıt */
-    width: 100%; /* Tüm genişliği kaplasın */
-    margin-top: 10px;
-    font-size: 0.9em;
-}
-
-/* Linklerin birbirine daha yakın olmasını isterseniz */
-.forgot-password a, .new-account a {
-    display: inline-block;
-    margin-right: 10px; /* Aralarına boşluk ekleyebilirsiniz */
-    color: #4a90e2;
+.nav-links a {
+    color: white;
     text-decoration: none;
+    font-size: 14px;
+    transition: opacity 0.3s ease;
+    padding: 5px 0;
 }
 
-.forgot-password a:hover, .new-account a:hover {
-    text-decoration: underline;
-    color: #0033cc;
+.nav-links a:hover {
+    opacity: 0.8;
 }
 
-
-/* Footer - Butonlar */
-.footer {
-
-    justify-content: space-between;
-    gap: 10px;
-    width: 100%;
-    margin-top: 20px;
-}
-
-.footer .btn-signup{
-    text-align: center;
-
-    width: 48%;
-    padding: 12px;
-    border-radius: 8px;
-    border: none;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.footer .btn-login {
-    background-color: #4a90e2;
-    color: white;
-}
-
-.footer .btn-login:hover {
-    background-color: #357ab7;
-}
-
-.footer .btn-github {
-    background-color: #333;
-    color: white;
-}
-
-.footer .btn-github:hover {
-    background-color: #555;
-}
-
-/* Genel Input Stilleri */
-input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-}
-
-input:focus {
-    border-color: #4a90e2;
-}
-
-/* Form Kontrolü */
-.form-control {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-}
-
-/* Butonlar */
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-    margin-top : 10px;
-}
-
-.btn-primary{
-    margin-bottom: 20px;
-    
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-.btn-primary {
-    background-color: #007bff;
-}
-
-.btn-primary:hover {
-    background-color: #0056b3;
-}
-
-.btn-github {
-    background-color: #333;
-    color: white;
-}
-
-.btn-github:hover {
-    background-color: #000;
-}
-
-/* Signup Form Özel Stilleri */
-form {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-
-/* Input Alanları */
-.input-group {
-    display: flex;
-    align-items: center; /* Label ve input'u aynı hizada tut */
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 15px;
-}
-
-.input-group label {
-    width: 30%; /* Label genişliği */
-    text-align: left; /* Sağda hizala */
-    padding-right: 10px;
-    font-size: 1rem; /* Label boyutunu tutarlı yap */
-    color: #333; /* Label metin rengini düzelt */
-}
-
-.input-group input {
-    width: 65%; /* Input genişliği */
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    transition: border-color 0.3s ease;
-}
-
-.input-group input:focus {
-    border-color: #4a90e2;
-    outline: none;
-}
-
-/* Forgot password ve Don't have an account linklerini yan yana hizala */
-.links-container {
-    display: flex;
-    justify-content: space-between; /* Linkleri yatayda dağıt */
-    margin-top: 10px;
-}
-
-.links-container a {
-    font-size: 0.9rem;
-    color: #4a90e2;
-    text-decoration: none;
-}
-
-.links-container a:hover {
-    text-decoration: underline;
-    color: #0033cc;
-}
-
-.new-account{
-    text-align: center;
-    margin-bottom : 10px;
-    justify-content: center;
-}
+/* Removed .active class styles */
 

@@ -3,56 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Membership</title>
+    <title>Membership - Bookify</title>
+    <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/membership.css">
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <a href="homepage.html" class="logo">
-                <img src="../images/bookify.png" alt="Bookify Logo" />
-                <span>Bookify</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="homepage.html">Home</a></li>
-                <li><a href="membership.html" class="active">Membership</a></li>
-                <li><a href="index.html" onclick="navigateLogin()">Login</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-            </ul>
-        </div>
-    </header>
-
-    <main>
-        <section class="membership-section">
-            <h1>Choose Your Membership Plan</h1>
-            <div class="plans-container">
-                <div class="plan">
-                    <h2>Basic</h2>
-                    <p>Access to basic features and limited book collection.</p>
-                    <span class="price">$5 / month</span>
-                    <button class="btn-primary">Choose Basic</button>
-                </div>
-
-                <div class="plan">
-                    <h2>Premium</h2>
-                    <p>Unlock all premium features and extended book collection.</p>
-                    <span class="price">$10 / month</span>
-                    <button class="btn-primary">Choose Premium</button>
-                </div>
-
-                <div class="plan">
-                    <h2>Pro</h2>
-                    <p>All features included with exclusive content and services.</p>
-                    <span class="price">$20 / month</span>
-                    <button class="btn-primary">Choose Pro</button>
-                </div>
+    <nav class="navbar">
+        <a href="homepage.html" class="logo">
+            <div class="logo-circle">
+                <span>B</span>
             </div>
-        </section>
-    </main>
+            <span>ookify</span>
+        </a>
+        <div class="nav-links">
+            <a href="homepage.html">Home</a>
+            <a href="membership.html">Membership</a>
+            <a href="login.html">Login</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+    </nav>
 
-    <footer>
-        <p>© 2024 Bookify. All rights reserved.</p>
-    </footer>
-    <script src="../js/auth/login.js"></script>
+    <div class="membership-container">
+        <div class="plans-wrapper">
+            <section class="plan-card">
+                <h2>Standard Plan</h2>
+                <div class="price">$9.99<span>/month</span></div>
+                <ul>
+                    <li>Access to basic features</li>
+                    <li>Limited book collection</li>
+                    <li>Standard support</li>
+                    <li>No ads</li>
+                </ul>
+                <button class="select-plan">Select Plan</button>
+            </section>
+
+            <section class="plan-card featured">
+                <div class="featured-badge">Popular</div>
+                <h2>Premium Plan</h2>
+                <div class="price">$19.99<span>/month</span></div>
+                <ul>
+                    <li>All Standard features</li>
+                    <li>Unlimited book collection</li>
+                    <li>24/7 Premium support</li>
+                    <li>Exclusive content</li>
+                </ul>
+                <button class="select-plan">Select Plan</button>
+            </section>
+        </div>
+    </div>
 </body>
 </html>

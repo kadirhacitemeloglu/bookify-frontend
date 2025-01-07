@@ -3,57 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-    <link rel="stylesheet" href="css/reset.css">
+    <title>Sign Up - Bookify</title>
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/signup.css">
 </head>
 <body>
-    <header role="banner" class="mh-header-hover">
-        <div class="navbar">
-            <a href="#" onclick="navigateHomepage()" class="logo">
-              <img src="../images/bookify.png" alt="Bookify Logo" />
-            </a>
-        </div>
-    </header>
-    
-    <div class="content" id="content">
-        <div class="header mb-3">
-            <h1 class="bookify text-center" id = "header-bookify">Bookify</h1>
+    <div class="signup-container">
+        <div class="logo-section">
+            <div class="logo">
+                <div class="logo-circle">
+                    <span>B</span>
+                </div>
+                <span>ookify</span>
+            </div>
         </div>
         
-        <div class="form-container" id="form-container">
-            <div class="form-group input-group">
-                <label for="username-bookify" class="username-label">Username:</label>
-                <input type="text" id="username-bookify" class="form-control" placeholder="Enter username">
-            </div>
-            <div class="form-group input-group">
-                <label for="email-bookify" class="email-label">Email:</label>
-                <input type="email" id="email-bookify" class="form-control" placeholder="Enter email">
-            </div>
-            <div class="form-group input-group">
-                <label for="password-bookify" class="password-label">Password:</label>
-                <input type="password" id="password-bookify" class="form-control" placeholder="Enter password">
-            </div>
-            <div class="form-group input-group">
-                <label for="confirm-password-bookify" class="password-label">Confirm Password:</label>
-                <input type="password" id="confirm-password-bookify" class="form-control" placeholder="Confirm password">
+        <form class="signup-form">
+            <div class="form-group">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" placeholder="Enter your full name">
             </div>
 
-            <div class="new-account">
-                <a href="#" onclick="navigateLogin()">Already have an account?</a>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email">
             </div>
-        </div>
+            
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Choose a username">
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Choose a password">
+            </div>
 
-        <div class="footer" id="footer">
-            <button type="button" class="btn-signup" onclick="handleSignup()">Sign Up</button>
-        </div>
-
-        <span id="authentication-error" class="error-message"></span>
-        <span id="success-message" class="success-message"></span>
-        <span id="message" class="message"></span>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" placeholder="Confirm your password">
+            </div>
+            
+            <div class="form-links">
+                <a href="login.html">Already have an account?</a>
+            </div>
+            
+            <div class="button-group">
+                <button type="submit" class="signup-btn">Sign Up</button>
+                <button type="button" class="github-btn">Sign Up with GitHub</button>
+            </div>
+        </form>
     </div>
-
-    <script src="../js/auth/signup.js"></script>
-    <script src="../js/main.js"></script>
 </body>
 </html>

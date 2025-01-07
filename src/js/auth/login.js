@@ -12,21 +12,14 @@ function handleLogin() {
 }
 
 function checkUserName(username, password) {
-  if (username == "khacitemeloglu" && password == "123") {
-    var messageSpan = document.getElementById("success-message");
-    messageSpan.textContent = "Login is successfully registered";
-    messageSpan.style.color = "green";
-    setTimeout(function () {
-      redirectToLogin();
-    }, 2000);
+  // Mock API for development
+  if (username === "test" && password === "test123") {
+    showSuccessMessage("Login successful");
+    setTimeout(() => {
+      window.location.href = "dashboard.html";
+    }, 1000);
   } else {
-    document.getElementById("authentication-error").innerHTML =
-      "Authentication error: Wrong username or password";
-    document.getElementById("authentication-error").style.color = "red";
-
-    document.getElementById("authentication-error").style.display = "block";
-    document.getElementById("username-bookify").value = "";
-    document.getElementById("password-bookify").value = "";
+    showError("Invalid credentials");
   }
 }
 
@@ -112,21 +105,15 @@ function showLoginPage() {
 }
 
 
-function navigateLogin(){
-  // Navigate to login page
-
-  // Implement additional logic here for navigation to login page
-  // For example, you can set a timeout to automatically redirect to login page after a certain period.
-   setTimeout(function(){
-      window.location.href = "index.html";
-   }, 2000);
+function navigateLogin() {
+  window.location.href = "login.html";
 }
 
 function navigateSignUp(){
-  // Navigate to signup page
-  setTimeout(function(){
-    window.location.href = "signup.html";
-  }, 2000);
+  window.location.href = "signup.html";
 }
 
+function navigateHomepage(){
+  window.location.href = "homepage.html";
+}
 

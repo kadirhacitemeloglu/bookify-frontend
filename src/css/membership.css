@@ -1,399 +1,113 @@
+body {
+    background: linear-gradient(135deg, #7579ff, #b224ef);
+}
 
-
-/* Navbar Düzeltme */
-.navbar {
+/* Plan container */
+.membership-container {
     display: flex;
-    justify-content: space-between; /* Logo ve linkleri iki yana yerleştirir */
-    align-items: center; /* Logo ve linkleri dikey olarak ortalar */
-    padding: 10px 40px;
-    width: 100%; /* Navbar tam genişlikte olsun */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
-    position: fixed; /* Sayfa kaydırıldığında sabit kalmasını sağlar */
-    top: 0; /* Ekranın en üstüne sabitle */
-    left: 0;
-/* Diğer elementlerin üstünde kalmasını sağlar */   
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px);
 }
 
-.logo img {
-    height: 50px;
-    margin-top: 110px;
-    margin-right: 10px;
-    margin-left: 30;
-}
-
-.nav-links {
+.plans-wrapper {
     display: flex;
-    list-style: none;
-    gap: 10px; /* Menü öğeleri arasına boşluk ekler */
-    margin-right:60px; /* Linkleri sağ tarafa hizalar */
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.nav-links li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-}
-
-.nav-links li a:hover {
-    color: #007bff;
-}
-
-/* Aktif sayfa linki için stil */
-.nav-links li a.active {
-    color: #007bff;
-    font-weight: bold;
-}
-
-/* Main İçerik Düzenlemesi */
-main {
-    padding-top: 80px; /* Navbar'ın üzerindeki alanı açmak için */
-    margin: 0 auto; /* İçeriği ortala */
-    width: 100%;
-}
-
-/* Membership Başlığı */
-.membership-section {
-    padding: 50px;
+/* Plan card styles */
+.plan-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 300px;
     text-align: center;
-}
-
-.membership-section h1 {
-    font-size: 3rem; /* Homepage başlığı gibi büyük font */
-    margin-bottom: 40px;
-    color: white; /* Beyaz başlık */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Gölgeli başlık efekti */
-}
-
-.plans-container {
     display: flex;
-    justify-content: center; /* Kartları ortala */
-    gap: 10px; /* Kartlar arasındaki boşluğu daha da daralt */
-    flex-wrap: wrap;
+    flex-direction: column;
+    height: 400px;
 }
 
-.plan {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
-    width: 250px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 10px; /* Kartlar arasında daha fazla boşluk bırakmak için */
-}
-
-.plan:hover {
-    transform: scale(1.05); /* Hafifçe büyüt */
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Daha güçlü bir gölge efekti */
-}
-
-
-.plan h2 {
+.plan-card h2 {
+    margin-bottom: 1rem;
     font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #4a90e2;
 }
 
-.plan p {
+.price {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.price span {
     font-size: 1rem;
-    margin-bottom: 20px;
-    color: #666;
+    opacity: 0.8;
 }
 
-.plan .price {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #007bff;
-    margin-bottom: 15px;
+/* Featured plan styles */
+.featured {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    position: relative;
 }
 
-.plan button {
-    background-color: #007bff;
+.featured-badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: #007bff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+/* Plan features list */
+.plan-card ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+}
+
+.plan-card li {
+    margin: 0.8rem 0;
+}
+
+/* Button styles */
+.select-plan {
+    width: 100%;
+    padding: 0.75rem;
+    background: #007bff;
     color: white;
-    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.3s ease;
+    margin-top: auto;
 }
 
-.plan button:hover {
-    background-color: #0056b3;
-    transform: scale(1.05); /* Butonlar da hafifçe büyüsün */
+.select-plan:hover {
+    background: #0056b3;
 }
 
-/* Mobil uyumluluk */
-@media (max-width: 768px) {
-    .plan {
-        width: 90%; /* Kartlar mobilde geniş alan kaplasın */
-        margin-bottom: 20px;
+/* Responsive styles */
+@media (max-width: 992px) {
+    .plans-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .plan-card {
+        width: calc(50% - 1rem);
     }
 }
 
-
-/* Genel Ayarlar */
-body {
-    background: radial-gradient(circle, #ff5f5f, #7ba4fe);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-}
-
-/* İçerik Kutusu */
-.content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 90%;
-    max-width: 400px;
-    padding: 30px;
-    background: #f9f9f9;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    border-radius: 15px;
-    border: 1px solid #ccc;
-    transition: transform 0.3s ease;
-    text-align: center;
-}
-
-.content:hover {
-    transform: translateY(-5px);
-}
-
-/* Logo */
-.logo {
-    position: relative;
-    top: -60px;
-    width: 100px;
-    height:80px;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-}
-
-.logo img {
-    width: 80%;
-    height: 80%;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-/* Header - Başlık */
-.bookify {
-    font-size: 2.5em;
-    font-weight: bold;
-    color: #4a90e2;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-
-/* Input Alanları */
-.input-group {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 15px;
-}
-
-.input-group label {
-    width: 30%;
-    text-align: right;
-    padding-right: 10px;
-}
-
-.input-group input {
-    width: 65%;
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    transition: border-color 0.3s ease;
-}
-
-.input-group input:focus {
-    border-color: #4a90e2;
-    outline: none;
-}
-
-/* Forgot password ve New account linklerini yan yana hizala */
-.forgot-password, .new-account {
-    display: flex;
-    justify-content: space-between; /* Linkleri yatayda dağıt */
-    width: 100%; /* Tüm genişliği kaplasın */
-    margin-top: 10px;
-    font-size: 0.9em;
-}
-
-/* Linklerin birbirine daha yakın olmasını isterseniz */
-.forgot-password a, .new-account a {
-    display: inline-block;
-    margin-right: 10px; /* Aralarına boşluk ekleyebilirsiniz */
-    color: #4a90e2;
-    text-decoration: none;
-}
-
-.forgot-password a:hover, .new-account a:hover {
-    text-decoration: underline;
-    color: #0033cc;
-}
-
-
-/* Footer - Butonlar */
-.footer {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    width: 100%;
-    margin-top: 20px;
-}
-
-.footer button {
-    width: 48%;
-    padding: 12px;
-    border-radius: 8px;
-    border: none;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.footer .btn-login {
-    background-color: #4a90e2;
-    color: white;
-}
-
-.footer .btn-login:hover {
-    background-color: #357ab7;
-}
-
-.footer .btn-github {
-    background-color: #333;
-    color: white;
-}
-
-.footer .btn-github:hover {
-    background-color: #555;
-}
-
-/* Genel Input Stilleri */
-input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-}
-
-input:focus {
-    border-color: #4a90e2;
-}
-
-/* Form Kontrolü */
-.form-control {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-}
-
-/* Butonlar */
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-.btn-primary {
-    background-color: #007bff;
-}
-
-.btn-primary:hover {
-    background-color: #0056b3;
-}
-
-.btn-github {
-    background-color: #333;
-    color: white;
-}
-
-.btn-github:hover {
-    background-color: #000;
-}
-
-/* Signup Form Özel Stilleri */
-form {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-
-/* Input Alanları */
-.input-group {
-    display: flex;
-    align-items: center; /* Label ve input'u aynı hizada tut */
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 15px;
-}
-
-.input-group label {
-    width: 30%; /* Label genişliği */
-    text-align: right; /* Sağda hizala */
-    padding-right: 10px;
-    font-size: 1rem; /* Label boyutunu tutarlı yap */
-    color: #333; /* Label metin rengini düzelt */
-}
-
-.input-group input {
-    width: 65%; /* Input genişliği */
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    transition: border-color 0.3s ease;
-}
-
-.input-group input:focus {
-    border-color: #4a90e2;
-    outline: none;
-}
-
-/* Forgot password ve Don't have an account linklerini yan yana hizala */
-.links-container {
-    display: flex;
-    justify-content: space-between; /* Linkleri yatayda dağıt */
-    margin-top: 10px;
-}
-
-.links-container a {
-    font-size: 0.9rem;
-    color: #4a90e2;
-    text-decoration: none;
-}
-
-.links-container a:hover {
-    text-decoration: underline;
-    color: #0033cc;
+@media (max-width: 768px) {
+    .plan-card {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        min-height: 350px;
+    }
 }
 

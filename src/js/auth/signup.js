@@ -14,17 +14,33 @@ function handleSignup() {
       return;
     }
   
+    // Add email validation
+    if (!isValidEmail(email)) {
+        alert("Please enter a valid email address.");
+        return;
+    }
+    
+    // Add password strength validation
+    if (password.length < 8) {
+        alert("Password must be at least 8 characters long.");
+        return;
+    }
+  
     // Daha fazla validasyon ve backend'e veri gönderme işlemi yapılacak.
     alert("Signup successful!");
     window.location.href = "index.html";
   }
 
 function navigateLogin() {
-    window.location.href = "index.html";
+    window.location.href = "login.html";
 }
 
 function navigateHomepage() {
     window.location.href = "homepage.html";
+}
+
+function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
 

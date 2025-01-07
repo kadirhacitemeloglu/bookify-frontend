@@ -220,11 +220,20 @@ footer {
 
     .sidebar {
         width: 100%;
-        left: -100%;
+        transform: translateX(-100%);
     }
-
+    
     .sidebar.active {
-        left: 0;
+        transform: translateX(0);
+    }
+    
+    .dashboard-section {
+        margin-left: 0 !important;
+        padding: 60px 10px;
+    }
+    
+    .navbar {
+        padding: 10px;
     }
 }
 
@@ -238,4 +247,76 @@ footer {
     margin-top: 30vh;
     align-items: left;
 
+}
+
+/* Dropdown Menüsü Aktifken */
+.dropdown-content.active {
+    display: block;
+}
+
+/* Dropdown Menüsü */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.hidden {
+    display: none; /* Gizli durum */
+}
+
+.visible {
+    display: block; /* Görünür durum */
+}
+
+
+/* Profil ve Dropdown */
+.profile-info {
+    position: relative;
+    cursor: pointer; /* İmleç tıklanabilir görünsün */
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none; /* Varsayılan olarak gizli */
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.hidden {
+    display: none; /* Gizli */
+}
+
+.visible {
+    display: block; /* Görünür */
 }
