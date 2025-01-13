@@ -3,53 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Membership - Bookify</title>
-    <link rel="stylesheet" href="../css/main.css">
+    <title>Membership</title>
     <link rel="stylesheet" href="../css/membership.css">
 </head>
 <body>
-    <nav class="navbar">
-        <a href="homepage.html" class="logo">
-            <div class="logo-circle">
-                <span>B</span>
-            </div>
-            <span>ookify</span>
-        </a>
-        <div class="nav-links">
-            <a href="homepage.html">Home</a>
-            <a href="membership.html">Membership</a>
-            <a href="login.html">Login</a>
-            <a href="faq.html">FAQ</a>
+    <header>
+        <div class="navbar" role="navigation" aria-label="main navigation">
+            <a href="homepage.html" class="logo" aria-label="Bookify Home">
+                <img src="../images/bookify.png" alt="Bookify Logo">
+                <span>Bookify</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
         </div>
-    </nav>
+    </header>
 
-    <div class="membership-container">
-        <div class="plans-wrapper">
-            <section class="plan-card">
-                <h2>Standard Plan</h2>
-                <div class="price">$9.99<span>/month</span></div>
-                <ul>
-                    <li>Access to basic features</li>
-                    <li>Limited book collection</li>
-                    <li>Standard support</li>
-                    <li>No ads</li>
-                </ul>
-                <button class="select-plan">Select Plan</button>
-            </section>
-
-            <section class="plan-card featured">
-                <div class="featured-badge">Popular</div>
-                <h2>Premium Plan</h2>
-                <div class="price">$19.99<span>/month</span></div>
-                <ul>
-                    <li>All Standard features</li>
-                    <li>Unlimited book collection</li>
-                    <li>24/7 Premium support</li>
-                    <li>Exclusive content</li>
-                </ul>
-                <button class="select-plan">Select Plan</button>
-            </section>
+    <div class="membership-section">
+        <div class="membership-content">
+            <h1>Choose Your Membership Plan</h1>
+            <div class="plans-wrapper">
+                <div class="plan-card">
+                    <h2>Standard Plan</h2>
+                    <div class="price">$9.99<span>/month</span></div>
+                    <ul>
+                        <li>Access to basic features</li>
+                        <li>Limited book collection</li>
+                        <li>Standard support</li>
+                        <li>No ads</li>
+                    </ul>
+                    <button class="btn primary">Select Plan</button>
+                </div>
+                <div class="plan-card featured">
+                    <h2>Premium Plan</h2>
+                    <div class="price">$19.99<span>/month</span></div>
+                    <ul>
+                        <li>All Standard features</li>
+                        <li>Unlimited book collection</li>
+                        <li>24/7 Premium support</li>
+                        <li>Exclusive content</li>
+                    </ul>
+                    <button class="btn secondary">Select Plan</button>
+                </div>
+            </div>
         </div>
     </div>
+
+    <footer>
+        <p>© 2024 Bookify. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
 </body>
 </html>

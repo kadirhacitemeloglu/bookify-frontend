@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Sidebar toggle functionality
     const menuToggle = document.getElementById('menu-toggle');
     const sidebar = document.getElementById('sidebar');
@@ -6,15 +6,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     menuToggle.addEventListener('click', () => {
         sidebar.classList.toggle('active');
-        dashboardSection.style.marginLeft = sidebar.classList.contains('active') ? '250px' : '0';
+        dashboardSection.style.marginLeft = sidebar.classList.contains('active') ? '210px' : '0';
     });
 
     // Profile dropdown functionality
     const profileInfo = document.querySelector('.profile-info');
-    const dropdownMenu = document.getElementById("dropdown");
-    
-    profileInfo.addEventListener("click", () => {
-        dropdownMenu.classList.toggle("visible");
+    const dropdownMenu = document.querySelector('.dropdown-content');
+
+    profileInfo.addEventListener('click', () => {
+        dropdownMenu.classList.toggle('visible');
     });
 });
 
@@ -41,14 +41,22 @@ function showAddBook() {
     `;
 }
 
+function showNotifications() {
+    updateContent('Notification Settings', 'Manage your notification preferences here.');
+}
+
+function showPrivacy() {
+    updateContent('Privacy Settings', 'Adjust your privacy settings here.');
+}
+
+function showMembershipPlan() {
+    updateContent('Membership Plan', 'Choose your preferred membership plan below.');
+}
+
 function updateContent(title, description) {
     const content = document.getElementById('dashboard-content');
     content.innerHTML = `
         <h1>${title}</h1>
         <p>${description}</p>
     `;
-}
-
-function manageBooks() {
-    showBooks();
 }

@@ -1,56 +1,154 @@
+/* Genel ayarlar */
 body {
-    background: linear-gradient(135deg, #7579ff, #b224ef);
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, rgba(255, 0, 150, 0.8), rgba(0, 204, 255, 0.8));
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 12px;
+    background-color: transparent;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff4757;
+    border-bottom: 2px solid #ff4757;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Login bölümü */
 .login-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 80px);
+    height: 100vh;
+    padding: 20px;
+    color: white;
+    margin-top: -80px; /* Navbar'ı hesaba katmak için */
 }
 
 .login-box {
     background: rgba(255, 255, 255, 0.1);
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: 10px;
     width: 100%;
     max-width: 400px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
 .login-box h2 {
     margin-bottom: 2rem;
-    font-size: 1.8rem;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
 }
 
 .form-group {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem; /* Alanlar arası mesafe */
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Kutucukların ortalanmasını sağlıyor */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    max-width: 300px; /* Label genişliği sınırlı */
+    position: relative;
+    text-align: left; /* Label sola hizalanıyor */
 }
 
 .form-group input {
     width: 100%;
+    max-width: 300px; /* Kutucuk genişliği sınırlı */
     padding: 0.75rem;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.1);
     color: white;
     font-size: 1rem;
+    text-align: left; /* İçerik sola hizalanıyor */
+}
+
+.form-group label {
+    margin-left: -1.25rem; /* Label'i input başlangıcına hizalama */
 }
 
 .form-group input::placeholder {
     color: rgba(255, 255, 255, 0.7);
 }
 
+/* Forgot Password sola hizalandı */
 .form-links {
     text-align: left;
     margin: 15px 0;
+    width: 100%;
+    max-width: 300px; /* Forgot Password genişliği sınırlı */
+    margin: 0 auto; /* Ortalıyor */
 }
 
 .forgot-password {
     color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
-    font-size: 14px;
+    font-size: 0.9rem;
     transition: all 0.3s ease;
+    margin-left: -0.5rem; /* Forgot Password sola hizalandı */
 }
 
 .forgot-password:hover {
@@ -58,8 +156,10 @@ body {
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
 }
 
-button[type="submit"] {
+/* Button stilleri ve boşluklar */
+.btn.primary {
     width: 100%;
+    max-width: 300px;
     padding: 15px;
     background: #007bff;
     color: white;
@@ -70,23 +170,51 @@ button[type="submit"] {
     font-weight: 500;
     letter-spacing: 0.5px;
     transition: all 0.3s ease;
-    margin-bottom: 20px;
+    margin-top: 20px; /* Buton ile yukarıdaki alan arasındaki mesafe */
+    margin-bottom: 20px; /* Buton ile aşağıdaki alan arasındaki mesafe */
 }
 
-.signup-text {
+.btn.primary:hover {
+    background: #0056b3;
+}
+
+.signup-link {
     text-align: center;
     font-size: 14px;
     color: rgba(255, 255, 255, 0.8);
 }
 
-.signup-text a {
+.signup-link a {
     color: #007bff;
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
 }
 
-.signup-text a:hover {
+.signup-link a:hover {
     color: #0056b3;
     text-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+}
+
+/* Footer */
+footer {
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }

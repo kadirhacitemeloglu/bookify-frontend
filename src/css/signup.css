@@ -4,6 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    margin: 0;
 }
 
 .signup-container {
@@ -12,18 +13,24 @@ body {
     padding: 40px;
     width: 100%;
     max-width: 400px;
+    text-align: center;
 }
 
 .logo-section {
-    text-align: center;
-    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
-.logo {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
+.logo img {
+    width: 80px; /* Logonun boyutunu ayarlayın */
+    height: 80px;
+    border-radius: 50%; /* Eğer logonuz yuvarlak bir tasarımda olacaksa */
+    background-color: white; /* İsterseniz arka plana bir renk verebilirsiniz */
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hafif bir gölge ekler */
 }
+
 
 .form-group {
     margin-bottom: 20px;
@@ -34,9 +41,11 @@ body {
     margin-bottom: 8px;
     color: white;
     font-size: 14px;
+    position: absolute;
 }
 
 .form-group input {
+    margin-top: 20px;
     width: 100%;
     padding: 12px;
     background: rgba(255, 255, 255, 0.1);
@@ -99,4 +108,4 @@ body {
 
 .github-btn:hover {
     background: rgba(255, 255, 255, 0.2);
-} 
+}
